@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <header>
+        <h1 id="logo">Task Management</h1>
+        <h3 id="greeting"><i id="greetingIcon"></i><span id="greetingText"></span></h1>
+    </header>
+    <main class="heroContainer">
+        <div id="buttonsContainer">
+            <button type="button" id="selectTasks">Select</button>
+            <button type="button" id="checkAllTasks" onclick="checkAll()">Check All</button>
+            <button type="button" id="uncheckAllTasks" onclick="uncheckAll()">Uncheck All</button>
+            <button type="button" id="deleteAll" onclick = "deleteAll()" >Delete All</button>
+            <button type="button" id="heroSave" onclick="heroSave()">Save</button>
+        </div>
+        <div id="taskListContainer">
+            <ul id="taskList" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+        </div>
+        <div id="addTaskContainer">
+            <input type="text" id="newTaskInput" placeholder="Create New Task">
+            <button type="button" id="addTaskButton" onclick="addTask()" >+</button>
+        </div>
+    </main>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
