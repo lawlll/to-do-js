@@ -1,4 +1,3 @@
-// enter to add task
 // multiple select complete
 // drag button
 // edit placeholder to display "task $index-of-task" after every modification to the list
@@ -64,12 +63,13 @@ function loadSavedTasks() {
   }
 }
 
-
 function addTask() {
   const taskInput = document.getElementById("newTaskInput");
   const taskList = document.getElementById("taskList");
 
   if (taskInput.value.trim() !== "") {
+    /*The trim() method removes whitespace from both sides of a string.
+    The trim() method does not change the original string. */
     const taskText = taskInput.value;
     const taskItem = document.createElement("li");
 
@@ -163,4 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //enter to add task
 
 const newTaskInput = document.getElementById("newTaskInput");
-newTaskInput.addEventListener()
+newTaskInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") addTask();
+});
