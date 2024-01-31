@@ -1,2 +1,5 @@
 # changes to be made:
-- when clicking delete, make deleted tasks hidden and before saving check if there are any hidden items so as to actually delete them this tim
+
+- multiple select complete
+- drag button
+- edit placeholder to display "task $index-of-task" after every modification to the list

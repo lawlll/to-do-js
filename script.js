@@ -1,7 +1,3 @@
-// multiple select complete
-// drag button
-// edit placeholder to display "task $index-of-task" after every modification to the list
-
 let thisHour = new Date().getHours();
 let greetingText, greetingIconClass;
 
