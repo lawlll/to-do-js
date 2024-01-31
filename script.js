@@ -41,15 +41,15 @@ function loadSavedTasks() {
       taskCheckbox.checked = savedTask.checked;
       taskCheckbox.onchange = () => {
         updateTaskStyle(taskLabel, taskCheckbox.checked);
-        heroSave(); // Save when checkbox state changes
+        // heroSave(); // Save when checkbox state changes
       };
 
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "Delete";
       deleteBtn.onclick = () => {
-        if (confirm("Are you sure you want to delete this task?")) {
+        if (confirm("delete this task?")) {
           taskList.removeChild(taskItem);
-          heroSave(); // Save after deleting a task
+          // heroSave(); // Save after deleting a task
         }
       };
 
@@ -136,7 +136,6 @@ function deleteAll() {
   }
 }
 
-function heroSave() {}
 function heroSave() {
   const taskList = document.getElementById("taskList");
   const tasks = taskList.getElementsByTagName("li");
